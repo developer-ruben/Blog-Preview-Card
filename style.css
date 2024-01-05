@@ -1,0 +1,147 @@
+/* || VARIABLES */
+
+:root {
+  --color-neutral-yellow: hsl(47, 88%, 63%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey: hsl(0, 0%, 50%);
+  --color-neutral-black: hsl(0, 0%, 7%);
+  --font-family: "Figtree", sans-serif;
+}
+
+/* || RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* || GENERAL STYLES */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2.4rem;
+  background-color: var(--color-neutral-yellow);
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* || CARD */
+
+.card {
+  box-shadow: 8px 8px 0 0 var(--color-neutral-black);
+  width: min(100%, 384px);
+  padding: 2.4rem;
+  background-color: var(--color-neutral-white);
+  border: 1px solid var(--color-neutral-black);
+  border-radius: 2rem;
+}
+
+.card__link {
+  color: black;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  color: var(--color-neutral-yellow);
+}
+
+.card__image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 2.4rem;
+  background-image: url("./assets/images/illustration-article.svg");
+  border-radius: 1rem;
+}
+
+.card__badge {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  padding: 0.4rem 1.2rem;
+  background-color: var(--color-neutral-yellow);
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.card__info {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.card__title {
+  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.card__text {
+  margin-bottom: 2.4rem;
+  color: var(--color-neutral-grey);
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.card__avatar {
+  width: 32px;
+  height: 32px;
+}
+
+/* || ATTRIBUTION */
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  padding: 0.8rem;
+  background-color: var(--color-neutral-white);
+  border: 1px solid var(--color-neutral-black);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution__link {
+  color: var(--color-neutral-black);
+}
+
+.attribution__link:hover {
+  color: var(--color-neutral-yellow);
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .card__badge,
+  .card__info {
+    font-size: 1.2rem;
+  }
+
+  .card__title {
+    font-size: 2rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
